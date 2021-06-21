@@ -9,6 +9,11 @@ func main() {
 	card := "Ace of Spades"
 	fmt.Println(card)
 
-	card = "Ace of Hearts"
+	card = newCard()
 	fmt.Println(card)
+}
+
+func newCard() string {
+
+	return "Five of Spades"
 }
