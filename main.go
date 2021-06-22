@@ -4,7 +4,12 @@ import "fmt"
 
 func main() {
 
-	sliceDemo()
+}
+
+func deckDemo() {
+
+	cards := newDeck()
+	cards.print()
 }
 
 func sliceDemo() {
