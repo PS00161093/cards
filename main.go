@@ -4,12 +4,15 @@ import "fmt"
 
 func main() {
 
+	deckDemo()
 }
 
 func deckDemo() {
 
 	cards := newDeck()
-	cards.print()
+	hand, remainingHand := deal(cards, 5)
+	hand.print()
+	remainingHand.print()
 }
 
 func sliceDemo() {
