@@ -1,10 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+	"strings"
+)
 
 func main() {
 
-	deckDemo()
+	cards := newDeck()
+	cards.saveToFile("deck-of-cards")
+}
+
+func (d deck) toString() string {
+
+	return strings.Join([]string(d), ",")
+}
+
+func (d deck) saveToFile(fileName string) error {
+
+	return ioutil.WriteFile(fileName, []byte(d.toString()), 0666)
 }
 
 func deckDemo() {
